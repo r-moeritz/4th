@@ -1,5 +1,7 @@
 *.exe
 *.o
-*.a
+*.so
 forth.image
+forthc
+forthconsole
 *.swp
