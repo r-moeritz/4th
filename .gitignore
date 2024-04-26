@@ -1,7 +1,8 @@
 *.exe
 *.o
 *.so
+*.swp
+*~
 forth.image
 forthc
 forthconsole
-*.swp

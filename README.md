@@ -17,14 +17,15 @@ How to compile
 --------------
 
 Under Linux use the shell script `compile.sh` and under Windows you
-can use `compile.bat`. If you want to compile a 64 bit Forth you
+can use `compile.bat`. If you want to compile a 64-bit Forth you
 should use the `compile_64.bat` or `compile_64.sh` script.
 
 You will find a `forthconsole` executable which is a Forth REPL that
 you can use to develop in a interactive way. 
 
-With the script `do_images.bat` you can generate a Forth REPL that 
-includes the full kernel.
+With the script `do_images.sh` (`do_images.bat` on Windows) you can
+generate a Forth REPL that includes the full kernel. Note that
+`do_images` currently only works with a 32-bit Forth.
 
 Examples
 --------

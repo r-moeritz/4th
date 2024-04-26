@@ -12,7 +12,6 @@ int main(int argc, char **argv) {
   ForthVm *vm = NULL;
   char kernelFile[1024];
   char startupFile[1024];
-  int displayPrompt = 1;
   int i;
 
   strcpy(kernelFile, "full.4th");
@@ -22,9 +21,7 @@ int main(int argc, char **argv) {
   startupFile[0]='\x0';
 
   for(i=1;i<argc;i++) {
-      if(strcmp(argv[i], "--noprompt")==0) {
-          displayPrompt = 0;
-      } else if(strcmp(argv[i],"--image")==0) {
+      if(strcmp(argv[i],"--image")==0) {
           InputStream *in = InputStream_NewForFile(argv[i+1]);
           vm=ForthVm_NewFromFile(in);
           InputStream_Delete(in);

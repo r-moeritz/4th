@@ -10,8 +10,6 @@
 
 int main(int argc, char **argv) {
   ForthVm *vm = NULL;
-  int displayPrompt = 1;
-  int i;
 
   InputStream *in = InputStream_NewForBuffer((void *)forthImage, forthImageLen);
   vm=ForthVm_NewFromFile(in);

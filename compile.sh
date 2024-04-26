@@ -4,5 +4,5 @@ gcc -Wall -fpic -DOS_LINUX -c quattro_parser.c quattro_vm.c quattro_istruzioni.c
 rm -f lib4th.a
 gcc -shared -o lib4th.so *.o
 
-gcc -o forthconsole -Wall -DOS_LINUX -g forthconsole.c -L. -Wl,-rpath=. -l4th -ldl
-gcc -o forthc -Wall -DOS_LINUX -g forthc.c -L. -Wl,-rpath=. -l4th -ldl
+gcc -o forthconsole -Wall -DOS_LINUX forthconsole.c -L. -Wl,-rpath=. -l4th -ldl
+gcc -o forthc -Wall -DOS_LINUX forthc.c -L. -Wl,-rpath=. -l4th -ldl

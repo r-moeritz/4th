@@ -59,9 +59,9 @@ int main(int argc, char **argv) {
         //@        <<compilazione>>
         //@+node:leonardoce.20090629082550.226:<<compilazione>>
         #ifdef OS_WINDOWS
-        sprintf(pad, "gcc -o %s -DOS_WINDOWS %s -L. -l4th", argv[2], nomeFileC);
+        sprintf(pad, "gcc -Wall -o %s -DOS_WINDOWS %s -L. -l4th", argv[2], nomeFileC);
         #else
-        sprintf(pad, "gcc -o %s -DOS_LINUX %s -L. -l4th -ldl", argv[2], nomeFileC);
+        sprintf(pad, "gcc -Wall -o %s -DOS_LINUX %s -L. -Wl,-rpath=. -l4th -ldl", argv[2], nomeFileC);
         #endif
         printf("eseguo: %s\n", pad);
         system(pad);
